@@ -157,6 +157,6 @@
   <PropertyGroup>
     <CommandLineArgsForDesignTimeEvaluation>-langversion:$(LangVersion) -checksumalgorithm:$(ChecksumAlgorithm)</CommandLineArgsForDesignTimeEvaluation>
     <CommandLineArgsForDesignTimeEvaluation Condition="'$(FinalDefineConstants)' != ''">$(CommandLineArgsForDesignTimeEvaluation) -define:$(FinalDefineConstants)</CommandLineArgsForDesignTimeEvaluation>
-    <OutputAssemblyForDesignTimeEvaluation>@(IntermediateAssembly)</OutputAssemblyForDesignTimeEvaluation>
+    <OutputAssemblyForDesignTimeEvaluation>$(IntermediateOutputPath)$(TargetName)$(TargetExt)</OutputAssemblyForDesignTimeEvaluation>
   </PropertyGroup>
 </Project>
